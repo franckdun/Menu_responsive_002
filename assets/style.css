@@ -1,0 +1,218 @@
+/* CSS rules to specify families */
+/* font-family: 'Arapey', serif;
+   font-family: 'Inria Serif', serif; */
+
+/* General   */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #112121;
+    --secondary-color: #f94658;
+    --third-color: #fff;
+    --fourth-color: #8f8f8f;
+
+    --primary-font: 'Inria Serif', serif;
+    --secondary-font: 'Arapey', serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    overflow: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+nav {
+    height: 100%;
+
+}
+
+/* toggle */
+
+.toggle {
+    color: var(--third-color);
+    font-size: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.ouvrir {
+    display: block;
+}
+
+.fermer {
+    display: none;
+}
+
+.open .ouvrir {
+    display: none;
+}
+
+.open .fermer {
+    display: block;
+}
+
+/* Menu */
+
+.menu {
+    /* background: red; */
+    height: 100%;
+    display: flex;
+}
+
+.menu_left,
+.menu_right {
+    width: 50%;
+    height: 100%;
+    background: var(--primary-color);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_left {
+    transform: translateX(-100%);
+}
+
+.menu_right {
+    transform: translateX(100%);
+}
+
+.open .menu_left,
+.open .menu_right {
+    transform: translateX(0);
+}
+
+/* Inner Menu Left */
+
+.menu_left_inner_item {
+    font-family: var(--primary-font);
+    font-size: 3rem;
+    color: var(--third-color);
+    margin-bottom: 2rem;
+}
+
+.menu_left_inner_item:last-child {
+    margin-bottom: 0;
+}
+
+.menu_left_inner_item a {
+    color: var(--third-color);
+    text-decoration: none;
+    transition: color .5s;
+}
+
+.menu_left_inner_item a:hover {
+    color: var(--secondary-color);
+}
+
+.menu_left_inner_item_small {
+    font-family: var(--secondary-font);
+    font-size: 1.25rem;
+}
+
+/* Inner Right Menu */
+
+.menu_right_inner_item_titre {
+    font-family: var(--primary-font);
+    font-size: 3rem;
+    color: var(--third-color);
+}
+
+.menu_right_inner_item ul {
+    list-style: none;
+}
+
+.menu_right_inner_item ul li {
+    margin-top: .5rem;
+}
+
+.menu_right_inner_item ul li a {
+    color: var(--fourth-color);
+    font-family: var(--secondary-font);
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition: color .05s;
+}
+
+.menu_right_inner_item ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.menu_right_inner_item:first-child {
+    margin-bottom: 3rem;
+}
+
+/* Separation */
+
+.sep {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* height: 100vh; */
+    width: 5px;
+    background: var(--secondary-color);
+}
+
+.sep_icon {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--third-color);
+    font-family: var(--secondary-font);
+    font-size: 1.7rem;
+    opacity: 0;
+}
+
+/* hero */
+
+.hero {
+    background: url('img/hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+}
+
+@media all and (max-width: 767px) {
+
+    .menu_right,
+    .sep_icon {
+        display: none;
+    }
+
+    .menu_left {
+        width: 100%;
+    }
+
+    .sep {
+        width: 1rem;
+        left: 0;
+    }
+
+}
