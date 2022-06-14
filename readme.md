@@ -3,7 +3,8 @@
 
 	#Un menu responsive animé avec HTML, CSS, JAVASCRIPT et GSAP ! 
 	
-	<p> voir ici; https://franckdun.github.io/Menu_responsive_002/ </p>
+	[![img contact](./img/readme.PNG)](https://franckdun.github.io/Menu_responsive_002/)
+	
 	
 	CHAINE Youtube Ben BK
 	Le tuto ; https://youtu.be/oRxXiW40dYQ
